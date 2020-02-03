@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A16BF2F2-D119-45DF-8A3F-21DD12EC56A3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Battleship.BattleshipUI</RootNamespace>
+    <AssemblyName>Battleship.BattleshipUI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="OpponentBoard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OpponentBoard.Designer.cs">
+      <DependentUpon>OpponentBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpponentCell.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OpponentCell.Designer.cs">
+      <DependentUpon>OpponentCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BattleshipCell.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BattleshipCell.Designer.cs">
+      <DependentUpon>BattleshipCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BattleshipBoard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BattleshipBoard.Designer.cs">
+      <DependentUpon>BattleshipBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BattleshipForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BattleshipForm.Designer.cs">
+      <DependentUpon>BattleshipForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BattleshipGameUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BattleshipGameUserControl.Designer.cs">
+      <DependentUpon>BattleshipGameUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AvaialbleShip.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AvaialbleShip.Designer.cs">
+      <DependentUpon>AvaialbleShip.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="OpponentBoard.resx">
+      <DependentUpon>OpponentBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BattleshipBoard.resx">
+      <DependentUpon>BattleshipBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpponentCell.resx">
+      <DependentUpon>OpponentCell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BattleshipCell.resx">
+      <DependentUpon>BattleshipCell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BattleshipForm.resx">
+      <DependentUpon>BattleshipForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BattleshipGameUserControl.resx">
+      <DependentUpon>BattleshipGameUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="AvaialbleShip.resx">
+      <DependentUpon>AvaialbleShip.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BattleshipControl\BattleshipControl.csproj">
+      <Project>{c91d1ea5-908b-4e87-b027-31dfa6e57b76}</Project>
+      <Name>BattleshipControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BattleshipModel\BattleshipModel.csproj">
+      <Project>{0be0ba7c-d0e3-4a85-8bc1-718b3f112ec5}</Project>
+      <Name>BattleshipModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logger\Logger.csproj">
+      <Project>{73368c6b-8246-40e8-ab75-92e950354a29}</Project>
+      <Name>Logger</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\battleship_board_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\battleship_game_control_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\battleship_cell_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\battleship_cell_ship_attacked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\battleship_cell_ship_missed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\battleship_cell_missed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\battleship_ship_cell_attacked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\assign_ship_available.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\assign_ship_not_available.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\battleship_ship_cell_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\fire_the_battle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\reset_the_battle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\fire_the_battle_disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\battleship_player_ship_cell_attacked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\hou_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\lv_logo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
